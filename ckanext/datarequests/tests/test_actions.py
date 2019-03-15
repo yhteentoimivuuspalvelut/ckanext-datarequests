@@ -343,8 +343,11 @@ class ActionsTest(unittest.TestCase):
 
         # Mock actions
         default_user = {'user': 1}
+
         default_org = {'org': 2, 'users': [{'id': 'user_1'}, {'id': 'user_2'}]}
-        default_pkg = None      # Accepted dataset cannot be different from None at this time
+
+        default_pkg = None  # Accepted dataset cannot be different from None at this time
+
         test_data._initialize_basic_actions(actions, default_user, default_org, default_pkg)
 
         # Call the function
@@ -391,7 +394,9 @@ class ActionsTest(unittest.TestCase):
 
         # Mock actions
         default_pkg = {'pkg': 1}
+
         default_org = {'org': 2}
+
         default_user = {'user': 3}
         test_data._initialize_basic_actions(actions, default_user, default_org, default_pkg)
 
@@ -419,9 +424,9 @@ class ActionsTest(unittest.TestCase):
         self._test_show_datarequest_found(datarequest, False, False)
 
     @parameterized.expand([
-        (None,     None),
+        (None, None),
         ('org_id', None),
-        (None,     'pkg_id'),
+        (None, 'pkg_id'),
         ('org_id', 'pkg_id')
     ])
     def test_show_datarequest_found_closed(self, organization_id, accepted_dataset_id):
@@ -459,7 +464,7 @@ class ActionsTest(unittest.TestCase):
         # For this reason it is not necessary to execute the test with all the possible combinations
         (False,),
         (False, 'org_id', None),
-        (False, None,     'pkg_id'),
+        (False, None, 'pkg_id'),
         (False, 'org_id', 'pkg_id')
     ])
     def test_update_datarequest(self, title_checked, organization_id=None, accepted_dataset_id=None):
@@ -475,7 +480,9 @@ class ActionsTest(unittest.TestCase):
 
         # Mock actions
         default_pkg = {'pkg': 1}
+
         default_org = {'org': 2}
+
         default_user = {'user': 3}
         test_data._initialize_basic_actions(actions, default_user, default_org, default_pkg)
 
@@ -545,8 +552,11 @@ class ActionsTest(unittest.TestCase):
         # Set the mocks
         actions.db.DataRequest.get_ordered_by_date.return_value = ddbb_response
         actions.db.DataRequestFollower.get_datarequest_followers_number.return_value = test_data.DEFAULT_FOLLOWERS
+
         default_pkg = {'pkg': 1}
+
         default_org = {'org': 2}
+
         default_user = {'user': 3, 'id': test_data.user_default_id}
         test_data._initialize_basic_actions(actions, default_user, default_org, default_pkg)
         actions.tk._ = lambda x: x
@@ -627,9 +637,9 @@ class ActionsTest(unittest.TestCase):
         self._test_no_id(actions.delete_datarequest)
 
     @parameterized.expand([
-        (None,     None),
+        (None, None),
         ('org_id', None),
-        (None,     'pkg_id'),
+        (None, 'pkg_id'),
         ('org_id', 'pkg_id')
     ])
     def test_delete_datarequest(self, organization_id, accepted_dataset_id):
@@ -640,7 +650,9 @@ class ActionsTest(unittest.TestCase):
         actions.db.DataRequest.get.return_value = [datarequest]
 
         default_pkg = {'pkg': 1}
+
         default_org = {'org': 2}
+
         default_user = {'user': 3}
         test_data._initialize_basic_actions(actions, default_user, default_org, default_pkg)
 
@@ -702,7 +714,9 @@ class ActionsTest(unittest.TestCase):
 
         # Mock actions
         default_pkg = {'pkg': 1}
+
         default_org = {'org': 2}
+
         default_user = {'user': 3}
         test_data._initialize_basic_actions(actions, default_user, default_org, default_pkg)
 
@@ -871,9 +885,8 @@ class ActionsTest(unittest.TestCase):
 
         # Check that the DB has been called appropriately
         (actions.db.Comment
-            .get_ordered_by_date.assert_called_once_with(
-                datarequest_id=test_data.comment_show_request_data['datarequest_id'],
-                desc=desc))
+            .get_ordered_by_date.assert_called_once_with(datarequest_id=test_data.comment_show_request_data['datarequest_id'],
+                                                         desc=desc))
 
         # Check that the response is OK
         for i in range(0, len(results)):

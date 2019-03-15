@@ -189,7 +189,6 @@ follow_data_request_data = {
     'id': DATAREQUEST_ID
 }
 
-
 # List datarequests
 
 org1 = 'org1'
@@ -197,8 +196,13 @@ org2 = 'org2'
 org3 = 'org3'
 organization_default_id = 'organziation_id'
 user_default_id = 'user_id'
+
+
 default_offset = 2
+
+
 default_limit = 3
+
 
 # First database result
 ddbb_response_1 = [_generate_basic_datarequest(organization_id=None)]
@@ -220,7 +224,6 @@ expected_result_1 = {
         }
     }
 }
-
 
 # Second database result
 ddbb_response_2 = [
@@ -438,7 +441,6 @@ list_datarequests_test_case_15 = {
     'ddbb_response': ddbb_response_1,
     'expected_response': expected_result_1
 }
-
 
 list_datarequests_test_case_16 = {
     'organization_show_func': _organization_show,
