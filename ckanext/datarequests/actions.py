@@ -188,7 +188,7 @@ def _get_datarequest_involved_users(context, datarequest_dict):
     users.update([comment['user_id'] for comment in list_datarequest_comments(
         new_context, {'datarequest_id': datarequest_id})])
 
-    if datarequest_dict['organization']:
+    if datarequest_dict['organization'] and datarequest_dict['organization']['name'] != 'yksityishenkilo':
         users.update([user['id'] for user in datarequest_dict['organization']['users']])
 
     # Notifications are not sent to the user that performs the action
@@ -294,7 +294,7 @@ def create_datarequest(context, data_dict):
 
     datarequest_dict = _dictize_datarequest(data_req)
 
-    if datarequest_dict['organization']:
+    if datarequest_dict['organization'] and datarequest_dict['organization']['name'] != 'yksityishenkilo':
         users = set([user['id'] for user in datarequest_dict['organization']['users']])
         users.discard(context['auth_user_obj'].id)
         _send_mail(users, 'new_datarequest', datarequest_dict)
