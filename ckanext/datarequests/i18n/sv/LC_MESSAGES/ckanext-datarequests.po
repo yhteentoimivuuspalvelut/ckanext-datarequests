@@ -2,7 +2,7 @@
 # Copyright (C) 2020 ORGANIZATION
 # This file is distributed under the same license as the ckanext-datarequests
 # project.
-# 
+#
 # Translators:
 # Alexis Troberg <alexis.troberg@gofore.com>, 2015
 # Zharktas <jari-pekka.voutilainen@gofore.com>, 2015,2020
@@ -61,7 +61,7 @@ msgstr ""
 
 #: ckanext/datarequests/email_template.py:7
 msgid "New datarequest for organization '{organization}'"
-msgstr "En ny databegär i organisation '{organization}'"
+msgstr "En ny databegäran till '{organization}'"
 
 #: ckanext/datarequests/email_template.py:9
 msgid ""
@@ -81,7 +81,25 @@ msgid ""
 "\n"
 "Avoindata.fi support\n"
 "avoindata@dvv.fi\n"
-msgstr "Användaren {user} ({email}) har lämnat en databegär i organisation ({organization}):\n\n--\nTitel:\n{request_title}\n\nBeskrivning:\n{request_description}\n--\n\n{link}\n\nBästa hälsningar\n\nAvoindata.fi stöd\navoindata@dvv.fi\n"
+""
+msgstr ""
+"Användaren {user} ({email}) har lämnat en databegäran till ({organization}):\n"
+"\n"
+"--\n"
+"Titel:\n"
+"{request_title}\n"
+"\n"
+"Beskrivning:\n"
+"{request_description}\n"
+"--\n"
+"\n"
+"{link}\n"
+"\n"
+"Vänliga hälsningar\n"
+"\n"
+"Supporten för Avoindata.fi\n"
+"avoindata@dvv.fi\n"
+""
 
 #: ckanext/datarequests/templates/datarequests/snippets/datarequest_form.html:18
 #: ckanext/datarequests/validator.py:31 ckanext/datarequests/validator.py:34
@@ -92,11 +110,11 @@ msgstr "Titel"
 #: ckanext/datarequests/validator.py:31
 #, python-format
 msgid "Title must be a maximum of %d characters long"
-msgstr "Titeln får vara max %d tecken"
+msgstr "Titeln får ha max. %d tecken"
 
 #: ckanext/datarequests/validator.py:34
 msgid "Title cannot be empty"
-msgstr "Titeln kan inte vara tom"
+msgstr "Titeln får inte vara tom"
 
 #: ckanext/datarequests/validator.py:41
 msgid "That title is already in use"
@@ -110,7 +128,7 @@ msgstr "Beskrivning"
 #: ckanext/datarequests/validator.py:45
 #, python-format
 msgid "Description must be a maximum of %d characters long"
-msgstr "Bekrivningen får vara max %d tecken lång"
+msgstr "Beskrivningen får ha max. %d tecken"
 
 #: ckanext/datarequests/templates/datarequests/snippets/additional_info.html:11
 #: ckanext/datarequests/templates/datarequests/snippets/datarequest_form.html:26
@@ -125,7 +143,7 @@ msgstr ""
 #: ckanext/datarequests/templates/datarequests/snippets/additional_info.html:24
 #: ckanext/datarequests/validator.py:66
 msgid "Accepted Dataset"
-msgstr "Godkänt dataset"
+msgstr "Godkänd datamängd"
 
 #: ckanext/datarequests/validator.py:66
 msgid "Dataset not found"
@@ -139,7 +157,7 @@ msgstr "Databegäran"
 
 #: ckanext/datarequests/validator.py:76
 msgid "Data Request not found"
-msgstr "Data begäran kunde inte hittas"
+msgstr "Kunde inte hitta databegäran"
 
 #: ckanext/datarequests/validator.py:79 ckanext/datarequests/validator.py:83
 msgid "Comment"
@@ -147,12 +165,12 @@ msgstr ""
 
 #: ckanext/datarequests/validator.py:79
 msgid "Comments must be a minimum of 1 character long"
-msgstr "Kommentaren måste vara minst 1 tecken lång"
+msgstr "Kommentaren måste ha minst 1 tecken"
 
 #: ckanext/datarequests/validator.py:83
 #, python-format
 msgid "Comments must be a maximum of %d characters long"
-msgstr "Kommentaren får vara max %d tecken lång"
+msgstr "Kommentaren får ha max %d tecken"
 
 #: ckanext/datarequests/controllers/ui_controller.py:129
 msgid "Newest"
@@ -165,7 +183,7 @@ msgstr ""
 #: ckanext/datarequests/controllers/ui_controller.py:145
 #: ckanext/datarequests/tests/test_ui_controller.py:633
 msgid "State"
-msgstr "Tillstånd"
+msgstr "Status"
 
 #: ckanext/datarequests/controllers/ui_controller.py:150
 #: ckanext/datarequests/templates/header.html:6
@@ -175,15 +193,15 @@ msgstr "Organisationer"
 
 #: ckanext/datarequests/controllers/ui_controller.py:160
 msgid "\"page\" parameter must be an integer"
-msgstr "parametern \"sida\" måste vara ett heltal"
+msgstr "Parametern \"page\" måste vara ett heltal"
 
 #: ckanext/datarequests/controllers/ui_controller.py:163
 msgid "Unauthorized to list Data Requests"
-msgstr "Auktorisering krävs för att lista dataförfrågningar"
+msgstr "Behörighet krävs för att lista databegäranden"
 
 #: ckanext/datarequests/controllers/ui_controller.py:215
 msgid "Unauthorized to create a Data Request"
-msgstr "Auktorisering krävs för att skapa en databegäran"
+msgstr "Behörighet krävs för att skapa en databegäran"
 
 #: ckanext/datarequests/controllers/ui_controller.py:230
 #: ckanext/datarequests/controllers/ui_controller.py:253
@@ -192,17 +210,17 @@ msgstr "Auktorisering krävs för att skapa en databegäran"
 #: ckanext/datarequests/controllers/ui_controller.py:415
 #, python-format
 msgid "Data Request %s not found"
-msgstr "Databegäran %s kunde inte hittas"
+msgstr "Kunde inte hitta databegäran %s"
 
 #: ckanext/datarequests/controllers/ui_controller.py:233
 #, python-format
 msgid "You are not authorized to view the Data Request %s"
-msgstr "Du har inte behörighet att visa databegärän %s"
+msgstr "Du saknar behörighet att granska databegäran %s"
 
 #: ckanext/datarequests/controllers/ui_controller.py:256
 #, python-format
 msgid "You are not authorized to update the Data Request %s"
-msgstr "Du har inte behörighet att uppdatera databegäran %s"
+msgstr "Du saknar behörighet att uppdatera databegäran %s"
 
 #: ckanext/datarequests/controllers/ui_controller.py:266
 #: ckanext/datarequests/tests/test_ui_controller.py:679
@@ -213,7 +231,7 @@ msgstr ""
 #: ckanext/datarequests/controllers/ui_controller.py:274
 #, python-format
 msgid "You are not authorized to delete the Data Request %s"
-msgstr "Du har inte behörighet att radera databegäran %s"
+msgstr "Du saknar behörighet att radera databegäran %s"
 
 #: ckanext/datarequests/controllers/ui_controller.py:284
 msgid "Organization was not found"
@@ -226,7 +244,7 @@ msgstr "Denna databegäran är redan stängd"
 #: ckanext/datarequests/controllers/ui_controller.py:351
 #, python-format
 msgid "You are not authorized to close the Data Request %s"
-msgstr "Du har inte behörighet att stänga databegärän %s"
+msgstr "Du saknar behörighet att stänga databegäran %s"
 
 #: ckanext/datarequests/controllers/ui_controller.py:380
 msgid "Comment has been published"
@@ -239,12 +257,12 @@ msgstr ""
 #: ckanext/datarequests/controllers/ui_controller.py:388
 #, python-format
 msgid "You are not authorized to %s"
-msgstr "Du har inte tillräckliga rättigheter för att utföra %s"
+msgstr "Du saknar behörighet för %s"
 
 #: ckanext/datarequests/controllers/ui_controller.py:419
 #, python-format
 msgid "You are not authorized to list the comments of the Data Request %s"
-msgstr "Du har inte behörighet att lista kommentarerna från databegäran %s"
+msgstr "Du saknar behörighet att lista kommentarerna för databegäran %s"
 
 #: ckanext/datarequests/controllers/ui_controller.py:429
 msgid "Comment has been deleted"
@@ -257,12 +275,12 @@ msgstr "Kommentaren %s kunde inte hittas"
 
 #: ckanext/datarequests/controllers/ui_controller.py:438
 msgid "You are not authorized to delete this comment"
-msgstr "Du har inte behörighet att ta bort den här kommentaren"
+msgstr "Du saknar behörighet att radera den här kommentaren"
 
 #: ckanext/datarequests/templates/header.html:5
 #: ckanext/datarequests/templates/user/read_base.html:7
 msgid "Datasets"
-msgstr "Dataseten"
+msgstr "Datamängder"
 
 #: ckanext/datarequests/templates/header.html:7
 msgid "Groups"
@@ -278,19 +296,15 @@ msgstr ""
 #: ckanext/datarequests/templates/organization/read_base.html:5
 #: ckanext/datarequests/templates/user/read_base.html:9
 msgid "Data Requests"
-msgstr "Dataförfrågningar"
+msgstr "Databegäranden"
 
 #: ckanext/datarequests/templates/header.html:9
 msgid "About"
 msgstr ""
 
 #: ckanext/datarequests/templates/datarequests/base.html:20
-msgid ""
-"Data Requests allow users to ask for data that is not published in the "
-"platform yet. If you want some specific data and you are not able to find it"
-" among all the published datasets, you can create a new data request "
-"specifying the data than you want to get."
-msgstr "Databegäran tillåter användare att fråga efter data som inte publicerats i plattformen ännu. Om du vill ha specifik data som du inte hittar bland publicerade dataseten kan du skapa en ny databegäran där du beskriver den data du vill ha."
+msgid "Data Requests allow users to ask for data that is not published in the platform yet. If you want some specific data and you are not able to find it among all the published datasets, you can create a new data request specifying the data than you want to get."
+msgstr "Genom en databegäran kan användaren begära data som ännu inte publicerats i plattformen. Om du vill ha specifika data som du inte hittar bland de publicerade datamängderna kan du skapa en ny databegäran där du beskriver vilka data du vill ha."
 
 #: ckanext/datarequests/templates/datarequests/close.html:3
 #: ckanext/datarequests/templates/datarequests/close.html:8
@@ -330,11 +344,7 @@ msgid "Create Data Request"
 msgstr "Skapa databegäran"
 
 #: ckanext/datarequests/templates/datarequests/new.html:16
-msgid ""
-"To create a data request, fill the form and specify a title and a "
-"description for your request. Please, be as clear as you can in order to "
-"ease the task of accomplishing your request. You can also specify an "
-"organization if your data request is closely related with it. "
+msgid "To create a data request, fill the form and specify a title and a description for your request. Please, be as clear as you can in order to ease the task of accomplishing your request. You can also specify an organization if your data request is closely related with it. "
 msgstr ""
 
 #: ckanext/datarequests/templates/datarequests/show.html:15
@@ -354,21 +364,21 @@ msgstr "Stängd"
 #: ckanext/datarequests/templates/datarequests/show.html:50
 #: ckanext/datarequests/templates/datarequests/snippets/datarequest_item.html:16
 msgid "Open"
-msgstr "Öppen"
+msgstr "Öppna"
 
 #: ckanext/datarequests/templates/datarequests/snippets/additional_info.html:2
 msgid "Additional Info"
-msgstr "Ytterligare information"
+msgstr "Mer information"
 
 #: ckanext/datarequests/templates/datarequests/snippets/additional_info.html:7
 msgid "Creator"
-msgstr "Skapare"
+msgstr "Skapad av"
 
 #: ckanext/datarequests/templates/datarequests/snippets/additional_info.html:8
 #: ckanext/datarequests/templates/datarequests/snippets/additional_info.html:12
 #: ckanext/datarequests/templates/datarequests/snippets/additional_info.html:29
 msgid "None"
-msgstr "Ingen"
+msgstr "Inget"
 
 #: ckanext/datarequests/templates/datarequests/snippets/additional_info.html:15
 msgid "Created"
@@ -376,23 +386,19 @@ msgstr "Skapad"
 
 #: ckanext/datarequests/templates/datarequests/snippets/additional_info.html:20
 msgid "Not closed yet"
-msgstr "Inte stängd ännu"
+msgstr "Ännu inte stängd"
 
 #: ckanext/datarequests/templates/datarequests/snippets/close_datarequest_form.html:12
 msgid "Accep. Dataset"
-msgstr "Godk. dataset"
+msgstr "Godk. Datamängd"
 
 #: ckanext/datarequests/templates/datarequests/snippets/comment_form.html:22
 msgid "Add a new Comment"
-msgstr "Lägg till en ny kommentar"
+msgstr "Lägg till ny kommentar"
 
 #: ckanext/datarequests/templates/datarequests/snippets/comment_form.html:23
 #, python-format
-msgid ""
-"You can use <a href=\"#markdown\" title=\"Markdown quick reference\" data-"
-"target=\"popover\" data-content=\"%(markdown_tooltip)s\" data-"
-"html=\"true\">Markdown formatting</a> here. You can refer datasets by adding"
-" their URL."
+msgid "You can use <a href=\"#markdown\" title=\"Markdown quick reference\" data-target=\"popover\" data-content=\"%(markdown_tooltip)s\" data-html=\"true\">Markdown formatting</a> here. You can refer datasets by adding their URL."
 msgstr ""
 
 #: ckanext/datarequests/templates/datarequests/snippets/comment_form.html:28
@@ -409,7 +415,7 @@ msgstr "Lägg till en kommentar"
 
 #: ckanext/datarequests/templates/datarequests/snippets/comment_item.html:18
 msgid "Are you sure you want to delete this comment?"
-msgstr "Är du säker på att du vill ta bort den här kommentaren?"
+msgstr "Vill du verkligen radera den här kommentaren?"
 
 #: ckanext/datarequests/templates/datarequests/snippets/comment_item.html:29
 msgid "commented"
@@ -417,27 +423,27 @@ msgstr ""
 
 #: ckanext/datarequests/templates/datarequests/snippets/comments.html:3
 msgid "Current Discussion"
-msgstr "Nuvarande diskussion"
+msgstr "Aktuell diskussion"
 
 #: ckanext/datarequests/templates/datarequests/snippets/comments.html:13
 msgid "This data request has not been commented yet"
-msgstr "Denna begäran har ännu inte kommentarer"
+msgstr "Denna begäran har ännu inga kommentarer"
 
 #: ckanext/datarequests/templates/datarequests/snippets/datarequest_form.html:18
 msgid "eg. Data Request Name"
-msgstr "t.ex. databegärans namn"
+msgstr "t.ex. Namnet på databegäran"
 
 #: ckanext/datarequests/templates/datarequests/snippets/datarequest_form.html:22
 msgid "eg. Data Request description"
-msgstr "t.ex. databegärans beskrivning"
+msgstr "T.ex. beskrivning av en databegäran"
 
 #: ckanext/datarequests/templates/datarequests/snippets/datarequest_form.html:30
 msgid "No organization"
-msgstr "Ingen organisation"
+msgstr "Organisation saknas"
 
 #: ckanext/datarequests/templates/datarequests/snippets/datarequest_form.html:44
 msgid "Are you sure you want to delete this data request?"
-msgstr "Är du säker på att du vill radera denna begäran?"
+msgstr "Vill du verkligen radera denna databegäran?"
 
 #: ckanext/datarequests/templates/datarequests/snippets/datarequest_form.html:45
 msgid "Delete"
@@ -445,7 +451,7 @@ msgstr "Radera"
 
 #: ckanext/datarequests/templates/datarequests/snippets/datarequest_list.html:1
 msgid "No Data Requests found"
-msgstr "Databegäran kunde inte hittas"
+msgstr "Inga databegäranden hittades"
 
 #: ckanext/datarequests/templates/datarequests/snippets/datarequest_list.html:14
 msgid "No Data Requests found with the given criteria"
@@ -453,7 +459,7 @@ msgstr ""
 
 #: ckanext/datarequests/templates/datarequests/snippets/datarequest_list.html:16
 msgid "How about creating one?"
-msgstr "Vill du skapa en?"
+msgstr "Varför inte skapa en?"
 
 #: ckanext/datarequests/templates/datarequests/snippets/edit_datarequest_form.html:4
 msgid "Update Data Request"
@@ -473,7 +479,7 @@ msgstr ""
 
 #: ckanext/datarequests/templates/organization/datarequests.html:19
 msgid "This organization cannot handle data requests"
-msgstr "Denna organisation kan inte hantera dataförfrågningar"
+msgstr "Denna organisation kan inte hantera databegäranden"
 
 #: ckanext/datarequests/templates/snippets/custom_search_form.html:6
 msgid "{number} data request found for \"{query}\""
@@ -498,3 +504,4 @@ msgstr ""
 #: ckanext/datarequests/templates/user/read_base.html:8
 msgid "Activity Stream"
 msgstr "Aktivitetsflöde"
+
